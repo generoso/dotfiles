@@ -1,0 +1,27 @@
+<keymap version="1" name="Eclipse copy" parent="Eclipse">
+  <action id="ExpandAll">
+    <keyboard-shortcut first-keystroke="ctrl add" />
+  </action>
+  <action id="ExpandRegion">
+    <keyboard-shortcut first-keystroke="ctrl add" />
+  </action>
+  <action id="ExternalSystem.ExpandAll">
+    <keyboard-shortcut first-keystroke="ctrl add" />
+  </action>
+  <action id="FileChooser.TogglePathShowing" />
+  <action id="Images.Editor.ZoomIn">
+    <keyboard-shortcut first-keystroke="ctrl add" />
+  </action>
+  <action id="IpnbAddCellBelowAction" />
+  <action id="Maven.ExpandAll">
+    <keyboard-shortcut first-keystroke="ctrl add" />
+  </action>
+  <action id="ParameterInfo">
+    <keyboard-shortcut first-keystroke="ctrl p" />
+  </action>
+  <action id="Print" />
+  <action id="Scala.TypeInfo">
+    <keyboard-shortcut first-keystroke="alt equals" />
+    <keyboard-shortcut first-keystroke="ctrl equals" />
+  </action>
+</keymap>

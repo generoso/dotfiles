@@ -1,0 +1,1 @@
+/home/generoso/Dropbox/Generoso/tech/scripts/shortcuts.sh

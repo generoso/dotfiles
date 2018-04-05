@@ -1,0 +1,32 @@
+[user]
+  email = generoso.pagano@gmail.com
+  name = Generoso Pagano
+
+[push]
+  default = current
+
+[merge]
+  tool = meld
+
+[diff]
+	tool = diffuse
+
+[color]
+  ui = auto
+
+[core]
+	editor = emacs
+
+[gui]
+	editor = emacs
+
+[alias]
+	unstage = reset HEAD --
+
+	commitamend = commit -s --amend
+
+	undocommit = reset --soft HEAD^
+
+	# git fetchpr upstream 186
+	# git checkout pull-requests/186
+	fetchpr = "!f() { cmd=\"git fetch $1 refs/pull-requests/$2/from:refs/remotes/$1/pull-requests/$2\"; echo $cmd; eval $cmd; } ;f"

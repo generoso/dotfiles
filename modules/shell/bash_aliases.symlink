@@ -1,0 +1,8 @@
+# Load aliases files
+
+for f in `ls $DOTFILES/modules/shell/aliases/*`
+do
+	#echo "Loading aliases: `basename $f` ..."
+	source "$f"
+done
+
