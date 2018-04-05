@@ -15,10 +15,7 @@
   ui = auto
 
 [core]
-	editor = emacs
-
-[gui]
-	editor = emacs
+	editor = emacs -nw
 
 [alias]
 	unstage = reset HEAD --
