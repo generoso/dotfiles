@@ -1,0 +1,15 @@
+{
+    "bookmarks": [], 
+    "gui_state": {
+        "mainview": {
+            "lock_layout": false, 
+            "show_status_filter": false, 
+            "height": 610, 
+            "windowstate": "AAAA/wAAAAL9AAAAAwAAAAAAAALCAAACSPwCAAAAAvsAAAAMAEMAbwBtAG0AaQB0AQAAABoAAACkAAAAYwAAIB/7AAAACABEAGkAZgBmAQAAAMEAAAGhAAAAIAD///8AAAABAAABFgAAAkj8AgAAAAP7AAAADABTAHQAYQB0AHUAcwEAAAAaAAABIwAAAGoA////+wAAABIARgBhAHYAbwByAGkAdABlAHMBAAABQAAAASIAAABqAP////sAAAAMAFIAZQBjAGUAbgB0AAAAAAD/////AAAAagD///8AAAADAAAAAAAAAAD8AQAAAAH8AAAAAP////8AAAAAAP////r/////AQAAAAL7AAAADgBBAGMAdABpAG8AbgBzAAAAAAD/////AAAAjAD////7AAAADgBDAG8AbgBzAG8AbABlAAAAAAD/////AAAAkAD///8AAAAAAAACSAAAAAQAAAAEAAAACAAAAAj8AAAAAA==", 
+            "width": 987, 
+            "maximized": false, 
+            "y": 244, 
+            "x": 577
+        }
+    }
+}
