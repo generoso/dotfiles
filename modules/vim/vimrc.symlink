@@ -1,0 +1,162 @@
+let g:plug_shallow = 0
+
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-vinegar'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'mileszs/ack.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'raichoo/purescript-vim'
+Plug 'FrigoEU/psc-ide-vim'
+Plug 'derekwyatt/vim-scala'
+Plug 'ayu-theme/ayu-vim'
+Plug 'airblade/vim-gitgutter'
+call plug#end()
+
+set colorcolumn=+1        " highlight column after 'textwidth'
+set colorcolumn=+1,+2,+3  " highlight three columns after 'textwidth'
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+
+" Set up syntax stuff
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
+
+set showmatch
+set matchtime=0
+set shortmess=atI
+set ruler
+set showcmd
+
+set sidescroll=1
+set sidescrolloff=3
+
+" Set xterm title
+set title
+
+" Search options
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set visualbell
+set noerrorbells
+set printoptions=paper:letter
+
+" Keep more lines of context
+set scrolloff=5
+
+" Make backspace delete lots of things
+set backspace=indent,eol,start
+fixdel
+:set nocp
+:map <BS> x 
+
+
+" Quick timeouts on key combinations.
+set timeoutlen=300
+
+" File type specific settings
+autocmd BufRead *.xfa set filetype=xml
+autocmd BufRead *.xru set filetype=xml
+autocmd BufRead *.xna set filetype=xml
+autocmd BufRead *.qcf set filetype=lisp
+autocmd BufRead qpx.inc set filetype=make
+autocmd BufRead letter* set filetype=mail
+
+autocmd Filetype * set formatoptions-=cro
+autocmd Filetype mail set fo -=l autoindent spell
+autocmd Filetype c,cpp,h set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd Filetype sh set ts=4 shiftwidth=2 expandtab
+autocmd Filetype lisp,ruby,xml,html set ts=8 shiftwidth=2 expandtab
+autocmd Filetype python set ts=4 shiftwidth=4 expandtab
+autocmd Filetype xml,xslt,diff,ruby color desert
+autocmd Filetype xml,xslt,diff,ruby set expandtab
+autocmd BufReadPre viper,.viper set filetype=lisp
+autocmd BufRead ~/stellar/* set lbr formatoptions=l
+
+autocmd BufRead *.dump set filetype=sql
+
+
+set title
+
+set t_Co=256
+set background=dark
+
+set scrolloff=7
+
+set showcmd
+
+"set number
+
+set paste
+set wildmode=longest,list
+
+set noswapfile
+
+set modeline
+set statusline=%<%f\ %h%m%r%Y%=%-14.(%l,%c%V%)\ %P
+highlight StatusLine ctermfg=7
+autocmd InsertEnter * highlight StatusLine ctermfg=5
+autocmd InsertLeave * highlight StatusLine ctermfg=7
+
+"set cursorline
+highlight CursorLine   cterm=NONE ctermbg=white ctermfg=white guibg=white guifg=white
+
+let g:syntastic_scala_checkers=['']
+
+" Set up colors
+"set termguicolors     " enable true colors support
+"let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+colorscheme murphy
+
+" For reference: 
+"   you can type :map to see the current mappings
+
+"   :map  - Display all maps
+"   :nmap - Display normal mode maps
+"   :imap - Display insert mode maps
+"   :vmap - Display visual and select mode maps
+"   :smap - Display select mode maps
+"   :xmap - Display visual mode maps
+"   :cmap - Display command-line mode maps
+"   :omap - Display operator pending mode maps
+"
+"  map (maps a character in normal mode)
+"  imap (maps a character in normal mode)
+"  vmap (maps a character in visual mode)
+
+" Copy and paste
+"   Control-c/x in visual mode to copy/cut
+"   Control-v   in normal mode to paste
+:vmap <C-c> "+y
+:vmap <C-x> "+c
+:map <C-v> c<ESC>"+p
+:map <C-S-v> c<ESC>"+P
+
+" Git configuration
+let g:gitgutter_highlight_lines = 1
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_signs = 1
+highlight link GitGutterAddLine DiffAdd
+highlight link GitGutterChangeLine DiffChange
+highlight link GitGutterDeleteLine DiffDelete
+highlight link GitGutterChangeDeleteLine GitGutterChangeLineDefault
+":map <C-g> :GitGutterSignsToggle<CR>
+":map <C-g> :GitGutterLineHighlightsToggle<CR>
+
+
