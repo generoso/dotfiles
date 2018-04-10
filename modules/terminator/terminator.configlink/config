@@ -1,5 +1,7 @@
 [global_config]
+  window_state = maximise
 [keybindings]
+  hide_window = <Primary>F12
 [layouts]
   [[default]]
     [[[child1]]]
