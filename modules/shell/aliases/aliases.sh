@@ -1,1 +1,47 @@
+# Minor customisations to very used commands
 alias em="emacs -nw"
+alias qdu='du -hs * | sort -h'
+alias gop='gnome-open'
+alias vim='vim -v'
+alias top='top -c'
+alias htop="htop -u `whoami`"
+alias route='route -n'
+alias cal='cal -3'
+alias grep='grep --color=always'
+
+complete -d cd
+
+alias r='readlink -e '
+
+# Save and go to last saved directory
+alias sd='pwd > ~/.last-dir'
+alias gd='cd $(cat ~/.last-dir)'
+
+# Show tree in a fancy way
+alias tree='tree -s -h -f --du'
+
+# Open a file
+alias gopen='nemo'
+
+# Open an editor
+alias notepad='gedit'
+
+# Show our documents
+#function qhelp() {
+#    ranger $DOTFILES/docs/
+#}
+
+# Search a file in the current directory or sub directories
+function qf(){
+    find | qgrep $1
+}
+
+# Edit an alias that matches a given pattern
+function qalias-edit() {
+	local ALIAS=$1
+	echo "Alias: $ALIAS"
+	FILES="`grep --color=never $ALIAS -l -R $DOTFILES/modules/shell/aliases/`"
+	echo "Found: "
+	echo $FILES
+	vim $FILES
+}
