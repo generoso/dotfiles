@@ -41,7 +41,18 @@ function qalias-edit() {
 	local ALIAS=$1
 	echo "Alias: $ALIAS"
 	FILES="`grep --color=never $ALIAS -l -R $DOTFILES/modules/shell/aliases/`"
-	echo "Found: "
-	echo $FILES
-	vim $FILES
+    if [ -z "$FILES" ];
+    then
+     echo "Alias \"$ALIAS\" not found"
+    else
+      echo "Found: "
+      echo $FILES
+      vim $FILES
+    fi
+}
+
+function qsplit-line() {
+    local LINE=$1
+    local SEP=$2
+    echo $LINE | tr $SEP '\n'
 }

@@ -128,6 +128,6 @@ fi
 stty -ixon
 
 # Welcome message
-date
-echo "Welcome "$USER"!!!"
-echo "Smart history file at: $CUSTOM_HISTORY_FILE"
+#date
+#echo "Welcome "$USER"!!!"
+#echo "Smart history file at: $CUSTOM_HISTORY_FILE"

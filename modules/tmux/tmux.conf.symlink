@@ -1,0 +1,46 @@
+# ref: https://lukaszwrobel.pl/blog/tmux-tutorial-split-terminal-windows-easily/
+
+# remap prefix to Control + a
+unbind C-b
+set -g prefix C-a
+
+# Pane switching with Alt-arrow
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# Activity monitoring
+setw -g monitor-activity on
+set -g visual-activity on
+
+# Highlighting Current Window Using Specified Colour
+set-window-option -g window-status-current-bg yellow
+
+# Split screen
+## Vertical split
+bind-key v split-window -h
+## Horizontal split
+bind-key h split-window -v
+
+# Resize pane
+bind -n M-S-Left resize-pane -L
+bind -n M-S-Right resize-pane -R
+bind -n M-S-Up resize-pane -U
+bind -n M-S-Down resize-pane -D
+
+#-------------------------------------------------------#
+#Pane colours
+#-------------------------------------------------------#
+# set inactive/active window styles
+set -g window-style 'fg=colour247,bg=colour236'
+set -g window-active-style 'fg=colour250,bg=black'
+ 
+#pane border
+set -g pane-border-bg colour235
+set -g pane-border-fg colour238
+set -g pane-active-border-bg colour236
+set -g pane-active-border-fg colour51
+#-------------------------------------------------------#
+
+
