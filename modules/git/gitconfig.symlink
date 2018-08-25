@@ -1,6 +1,6 @@
 [user]
   email = generoso.pagano@gmail.com
-  name = gpagano
+  name = Generoso Pagano 
 
 [push]
   default = current
@@ -15,7 +15,7 @@
   ui = auto
 
 [core]
-  editor = emacs -nw
+  editor = vim
 
 [alias]
   unstage = reset HEAD --
