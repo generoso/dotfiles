@@ -30,7 +30,7 @@ bind -n M-S-Up resize-pane -U
 bind -n M-S-Down resize-pane -D
 
 #-------------------------------------------------------#
-#Pane colours
+# Pane colours
 #-------------------------------------------------------#
 # set inactive/active window styles
 set -g window-style 'fg=colour247,bg=colour236'

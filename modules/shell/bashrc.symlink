@@ -71,7 +71,7 @@ export HISTSIZE=100000
 # export HISTIGNORE="&:ls:exit"
 
 # Add command to the history file as soon as it is typed
-PROMPT_COMMAND="_append_history; history -a;$PROMPT_COMMAND"
+PROMPT_COMMAND="_append_history; history -a; $PROMPT_COMMAND"
 
 # append to the history file, don't overwrite it
 shopt -s histappend
