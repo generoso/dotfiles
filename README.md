@@ -16,4 +16,4 @@ cd $HOME/.dotfiles
 
 ## Credits
 
-To start-up my `.dotfiles` I based on the awesome [mauriciojost/dotfiles](https://github.com/mauriciojost/dotfiles).
+To start-up my `.dotfiles` I took as a model the awesome [mauriciojost/dotfiles](https://github.com/mauriciojost/dotfiles).
