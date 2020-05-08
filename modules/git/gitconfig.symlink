@@ -32,9 +32,14 @@
 
   co = checkout
 
-  # git fetchpr upstream 186
-  # git checkout pull-requests/186
+  # fetch and pull PRs:
+  # - git fetchpr upstream 186
+  # - git checkout pull-requests/186
+  # - git pullpr upstream 186
+
   fetchpr = "!f() { cmd=\"git fetch $1 refs/pull-requests/$2/from:refs/remotes/$1/pull-requests/$2\"; echo $cmd; eval $cmd; } ;f"
+
+  pullpr = "!f() { cmd=\"git pull $1 refs/pull-requests/$2/from:refs/remotes/$1/pull-requests/$2\"; echo $cmd; eval $cmd; } ;f"
 
 [credential]
   helper = store
