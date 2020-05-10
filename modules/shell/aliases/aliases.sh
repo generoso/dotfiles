@@ -27,9 +27,9 @@ alias gopen='nemo'
 alias notepad='gedit'
 
 # Show our documents
-#function qhelp() {
-#    ranger $DOTFILES/docs/
-#}
+function qhelp() {
+    ranger $DOTFILES/docs/
+}
 
 # Search a file in the current directory or sub directories
 function qf(){
