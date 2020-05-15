@@ -56,3 +56,6 @@ function qsplit-line() {
     local SEP=$2
     echo $LINE | tr $SEP '\n'
 }
+
+alias gpl="gpaste-client history | less"
+alias gps="gpaste-client select" # usage: gps 3 (select 3rd item of gpl output)
