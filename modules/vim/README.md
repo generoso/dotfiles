@@ -9,7 +9,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 After this is done please run in `vim` the following command:
 
 ```
-:PluginInstall
+:PlugInstall
 ```
 
 And that is all!
