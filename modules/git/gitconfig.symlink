@@ -43,3 +43,9 @@
 
 [credential]
   helper = store
+
+[cola]
+  spellcheck = false
+
+[gui]
+  editor = code
