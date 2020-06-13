@@ -1,0 +1,12 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "files.autoSave": "afterDelay",
+    "json.schemas": [
+    {
+        "fileMatch": [
+            "/myfile"
+        ],
+        "url": "schemaURL"
+    }
+    ]
+}

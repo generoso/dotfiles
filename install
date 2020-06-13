@@ -8,7 +8,7 @@ DOTFILES_ROOT="`pwd`"
 
 set -e
 
-echo ''
+# Utilities #
 
 info () {
   printf "  [ \033[00;34m..\033[0m ] $1"
@@ -128,30 +128,22 @@ install_dotfiles () {
   done
 }
 
+# Main #
+
+echo ''
 info "Base: $DOTFILES_ROOT"
 
 setup_gitconfig
 install_dotfiles "symlink" "$HOME" "."
 install_dotfiles "configlink" "$HOME/.config" ""
+install_dotfiles "vscode_customlink" "$HOME/.config/Code/User" ""
 
-# If we are on a mac, lets install and setup homebrew
-if [ "$(uname -s)" == "Darwin" ]
-then
-  info "installing dependencies"
-  if . bin/dot > /tmp/dotfiles-dot 2>&1
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
-fi
-
+# git submodules
 git submodule update --init --recursive
 
 # fzf
 echo "Install fzf"
 modules/fzf/install
-
 
 echo ''
 echo '  All installed!'
