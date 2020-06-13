@@ -1,3 +1,6 @@
 [submodule "modules/dev-shell-essentials"]
 	path = modules/dev-shell-essentials
 	url = https://github.com/kepkin/dev-shell-essentials.git
+[submodule "modules/fzf"]
+	path = modules/fzf
+	url = https://github.com/junegunn/fzf.git
