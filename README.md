@@ -14,6 +14,9 @@ cd $HOME/.dotfiles
 ./install.sh
 ```
 
+All files in this repo whose name ends in `.symlink` will be symlinked to `$HOME`. All 
+the files whose name ends in `.configlink` will be symlinked to `$HOME/.config/` .
+
 ## Credits
 
 To start-up my `.dotfiles` I took as a model the awesome [mauriciojost/dotfiles](https://github.com/mauriciojost/dotfiles).
