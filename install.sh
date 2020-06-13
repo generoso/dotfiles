@@ -148,5 +148,10 @@ fi
 
 git submodule update --init --recursive
 
+# fzf
+echo "Install fzf"
+modules/fzf/install
+
+
 echo ''
 echo '  All installed!'

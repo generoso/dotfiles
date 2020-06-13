@@ -131,3 +131,5 @@ stty -ixon
 #date
 #echo "Welcome "$USER"!!!"
 #echo "Smart history file at: $CUSTOM_HISTORY_FILE"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
