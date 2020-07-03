@@ -8,5 +8,6 @@
         ],
         "url": "schemaURL"
     }
-    ]
+    ],
+    "explorer.confirmDragAndDrop": false
 }
