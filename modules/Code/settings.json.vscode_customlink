@@ -1,13 +1,22 @@
 {
-    "workbench.startupEditor": "newUntitledFile",
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
     "files.autoSave": "afterDelay",
-    "json.schemas": [
-    {
-        "fileMatch": [
-            "/myfile"
-        ],
-        "url": "schemaURL"
-    }
-    ],
-    "explorer.confirmDragAndDrop": false
+    "editor.wordWrap": "on",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.statusBar.visible": false,
+    "window.menuBarVisibility": "compact",
+    "terminal.integrated.inheritEnv": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "security.workspace.trust.untrustedFiles": "open"
 }
