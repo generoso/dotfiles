@@ -25,7 +25,7 @@ function qfzf_cd_with() {
 
 # Search on typical dirs by filename (not by content) and stdout vim command on choice
 function qfzf_code_with() {
-  echo code "$(find $(_typical_dirs) -type f $find_args 2>/dev/null | egrep $egrep_filter | sort -r -u | _fzf --header="EDIT..." --preview="head -100 {}" --bind="left:toggle-preview")"
+  code "$(find $(_typical_dirs) -type f $find_args 2>/dev/null | egrep $egrep_filter | sort -r -u | _fzf --header="EDIT..." --preview="head -100 {}" --bind="left:toggle-preview")"
 }
 
 function qfzf_history_with() {
@@ -44,7 +44,7 @@ function qfzf_file_path_egrepargs_X_by_filenamecontent() {
   f="$(find $from -type f $find_args $find_extra_args -printf "%T@:%p\n" | egrep $egrep_filter | sort -n -r -u | awk -F: '{print $2}' | while IFS= read -r f ; do echo "$f: $(head -$_FILE_CONTENT_MAX_FZF "$f" | tr -d '\n' | tr -d '\0')"; done | _fzf --header="$header" --tiebreak=index | awk -F: '{print $1}')"
   if [ "$f" != "" ]
   then
-    echo "code $f"
+    code $f
   else
     echo ""
   fi
