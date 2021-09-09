@@ -51,6 +51,21 @@ function qalias-edit() {
     fi
 }
 
+# Edit an alias that matches a given pattern
+function qfunction-edit() {
+	local ALIAS=$1
+	echo "Alias: $ALIAS"
+	local FILES="`grep --color=never $ALIAS -l -R $DOTFILES/modules/shell/*/`"
+    if [ -z "$FILES" ];
+    then
+     echo "Function \"$ALIAS\" not found"
+    else
+      echo "Found: "
+      echo $FILES
+      vim $FILES
+    fi
+}
+
 function qsplit-line() {
     local LINE=$1
     local SEP=$2
@@ -59,3 +74,5 @@ function qsplit-line() {
 
 alias gpl="gpaste-client history | less"
 alias gps="gpaste-client select" # usage: gps 3 (select 3rd item of gpl output)
+
+
