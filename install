@@ -136,7 +136,6 @@ info "Base: $DOTFILES_ROOT"
 setup_gitconfig
 install_dotfiles "symlink" "$HOME" "."
 install_dotfiles "configlink" "$HOME/.config" ""
-install_dotfiles "vscode_customlink" "$HOME/.config/Code/User" ""
 
 # git submodules
 git submodule update --init --recursive
