@@ -1,6 +1,7 @@
 # Utilities to work with python venv
 
 envs_dir=~/envs/
+env_file=.venv
 
 ## Create env
 
@@ -27,3 +28,23 @@ _envs() {
 }
 
 complete -F _envs activate_env
+
+## Activate when entering a directory with .venv file
+
+PROMPT_COMMAND='prompt'
+
+prompt() {
+    if [ "$PWD" != "$MYOLDPWD" ]; then
+        MYOLDPWD="$PWD"
+        test -e $env_file && activate_env $(cat $env_file)
+    fi
+}
+
+## Install env for auto activation
+
+install_env() {
+    local env=$1
+    echo $env > $env_file
+}
+
+complete -F _envs install_env
