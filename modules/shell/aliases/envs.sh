@@ -1,6 +1,6 @@
 # Utilities to work with python venv
 
-envs_dir=~/envs/
+envs_dir=~/.venvs/
 env_file=.venv
 
 ## Create env
