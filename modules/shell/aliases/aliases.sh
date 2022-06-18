@@ -18,7 +18,7 @@ alias sd='pwd > ~/.last-dir'
 alias gd='cd $(cat ~/.last-dir)'
 
 # Show tree in a fancy way
-alias tree='tree -s -h -f --du'
+alias qtree='tree -s -h -f --du'
 
 # Open a file
 alias gopen='nemo'
