@@ -14,8 +14,8 @@ cd $HOME/.dotfiles
 ./install
 ```
 
-All files in this repo whose name ends in `.symlink` will be symlinked to `$HOME`. All 
-the files whose name ends in `.configlink` will be symlinked to `$HOME/.config/` .
+All the files in this repo whose name ends in `.symlink` will be symlinked to `$HOME`. 
+All the files whose name ends in `.configlink` will be symlinked to `$HOME/.config/`.
 
 ## Credits
 
