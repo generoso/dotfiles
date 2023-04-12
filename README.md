@@ -11,6 +11,7 @@ Your dotfiles define how you personalize your system.
 git clone https://github.com/generoso/dotfiles.git
 mv dotfiles $HOME/.dotfiles
 cd $HOME/.dotfiles
+./packages/install_packages
 ./install
 ```
 
