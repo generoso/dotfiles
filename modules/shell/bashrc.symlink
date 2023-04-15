@@ -141,3 +141,9 @@ stty -ixon
 #echo "Smart history file at: $CUSTOM_HISTORY_FILE"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# pyenv config from .dotfiles
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

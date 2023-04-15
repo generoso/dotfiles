@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#
+# This script will install some custom configs and other modules
+
+CURRDIR="`dirname $0`"
+cd $CURRDIR
+DOTFILES_ROOT="`pwd`"
+
+set -e
+
+echo "For: fzf"
+modules/fzf/install
+
+echo "For: pyenv"
+cd $DOTFILES_ROOT/modules/pyenv/
+bash install
+
+# echo "For: keyboard"
+# sudo cp $DOTFILES/modules/keys-remap/keyboard /etc/default/keyboard
+
+# echo "For: privates"
+# cd $DOTFILES_ROOT/modules/privates/
+# bash install.sh
+
+cd $DOTFILES_ROOT
+
+echo ''
+echo '  All custom installed!'

@@ -140,9 +140,12 @@ install_dotfiles "configlink" "$HOME/.config" ""
 # git submodules
 git submodule update --init --recursive
 
-# fzf
-echo "Install fzf"
-modules/fzf/install
+echo ''
+echo '  All base installed!'
+
+echo ''
+echo '  Installing custom configs and other modules'
+./install-custom
 
 echo ''
 echo '  All installed!'
