@@ -15,6 +15,9 @@ echo "For: pyenv"
 cd $DOTFILES_ROOT/modules/pyenv/
 bash install
 
+echo "For: Templates"
+mkdir -p ~/Templates && touch ~/Templates/file.md;
+
 # echo "For: keyboard"
 # sudo cp $DOTFILES/modules/keys-remap/keyboard /etc/default/keyboard
 
