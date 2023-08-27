@@ -19,7 +19,11 @@ xev | grep keycode
 
 Remapping works well, but for Shift there is a small delay, so usage is annoying.
 
+Update: with Wayland the delay is not present (and xmodmap does not work anyway..)
+
 # Remapping with xmodmap 
+
+Update: This only works on Xorg (it does not work on Wayland, default on ubuntu 22.04)
 
 https://wiki.archlinux.org/title/Xmodmap#Keymap_table
 
@@ -75,3 +79,9 @@ mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
 
 Notes:
 - 0x32 before was a shift, now it's a control
+
+Reset meta to defaults:
+
+```
+setxkbmap -option
+```
