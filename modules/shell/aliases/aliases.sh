@@ -76,5 +76,6 @@ alias gpl="gpaste-client history | less"
 alias gps="gpaste-client select" # usage: gps 3 (select 3rd item of gpl output)
 
 alias k="xmodmap ~/.Xmodmap"
+alias kd="setxkbmap -option"
 
 
