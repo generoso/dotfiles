@@ -21,10 +21,10 @@ alias gd='cd $(cat ~/.last-dir)'
 alias qtree='tree -s -h -f --du'
 
 # Open a file
-alias gopen='nemo'
+alias gopen='nautilus'
 
 # Open an editor
-alias notepad='gedit'
+alias notepad='code'
 
 # Show our documents
 function qhelp() {
@@ -74,5 +74,7 @@ function qsplit-line() {
 
 alias gpl="gpaste-client history | less"
 alias gps="gpaste-client select" # usage: gps 3 (select 3rd item of gpl output)
+
+alias k="xmodmap ~/.Xmodmap"
 
 

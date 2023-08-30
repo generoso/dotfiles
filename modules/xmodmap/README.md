@@ -43,23 +43,7 @@ mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
 mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
 ```
 
-~/.Xmodmap used to remap:
-
-```
-! First clear ALL the modifiers involved in the remapping
-clear shift
-clear lock
-clear control
-
-! map shift key (50) to Control_L 
-keycode 50 = Control_L NoSymbol NoSymbol
-! map caps lock key (66) to Control_L 
-keycode 66 = Shift_L NoSymbol NoSymbol
-
-! Add back the modifiers
-add shift = Caps_Lock Shift_R
-add control = Shift_L Control_L Control_R
-```
+~/.Xmodmap used to remap: see Xmodmap.symlink in this folder
 
 New modifiers mapping:
 

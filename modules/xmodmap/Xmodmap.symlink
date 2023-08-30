@@ -7,6 +7,8 @@ clear control
 keycode 50 = Control_L NoSymbol NoSymbol
 ! map caps lock key (66) to Control_L 
 keycode 66 = Shift_L NoSymbol NoSymbol
+! disable standard ctrl key
+keycode 37 = 
 
 ! Add back the modifiers
 add shift = Caps_Lock Shift_R
