@@ -5,8 +5,8 @@ clear control
 
 ! map shift key (50) to Control_L 
 keycode 50 = Control_L NoSymbol NoSymbol
-! map caps lock key (66) to Control_L 
-keycode 66 = Shift_L NoSymbol NoSymbol
+! map caps lock key (66) to Shift_L 
+keycode 66 = Shift_L NoSymbol Shift_L
 ! disable standard ctrl key
 keycode 37 = 
 
