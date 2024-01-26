@@ -41,6 +41,8 @@
 
   pullpr = "!f() { cmd=\"git pull $1 refs/pull-requests/$2/from:refs/remotes/$1/pull-requests/$2\"; echo $cmd; eval $cmd; } ;f"
 
+  graph = log --graph --all --format='%h %s%n        (%an, %ar)%d' --abbrev-commit
+
 [credential]
   helper = store
 
