@@ -50,6 +50,15 @@ setup_gitconfig () {
   fi
 }
 
+setup_gitlfs () {
+  info 'setup git lfs'
+  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+  sudo apt-get update
+  sudo apt-get install git-lfs
+  git lfs completion bash > ~/.gitlfs
+  success 'git lfs'
+}
+
 link_files () {
   ln -fs $1 $2
   success "linked $1 to $2"
@@ -134,6 +143,7 @@ echo ''
 info "Base: $DOTFILES_ROOT"
 
 setup_gitconfig
+setup_gitlfs
 install_dotfiles "symlink" "$HOME" "."
 install_dotfiles "configlink" "$HOME/.config" ""
 
