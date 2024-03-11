@@ -78,4 +78,4 @@ alias gps="gpaste-client select" # usage: gps 3 (select 3rd item of gpl output)
 alias k="xmodmap ~/.Xmodmap"
 alias kd="setxkbmap -option"
 
-alias qapt="sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get autoremove && sudo apt-get autoclean"
+alias qapt="sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean"
