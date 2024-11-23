@@ -143,7 +143,7 @@ echo ''
 info "Base: $DOTFILES_ROOT"
 
 setup_gitconfig
-setup_gitlfs
+# setup_gitlfs # FIXME
 install_dotfiles "symlink" "$HOME" "."
 install_dotfiles "configlink" "$HOME/.config" ""
 
