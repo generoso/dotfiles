@@ -22,7 +22,7 @@ alias la='ls -A'
 
 function qfind-by-name () {
 	qassertnotempty "$1" "Arguments: <filename-pattern-to-look-for>"
-	find . -name "$1" | xargs -I% readlink -e % 
+	find . -name "$1" | xargs -I% realpath % 
 }
 
 function qgrep-in-all-files() {

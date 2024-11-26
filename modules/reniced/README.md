@@ -3,7 +3,7 @@
 Create a link to the reniced configuration file:
 
 ```
-sudo ln -fs `readlink -e ~/.dotfiles/modules/reniced/reniced.conf`
+sudo ln -fs `realpath ~/.dotfiles/modules/reniced/reniced.conf`
 ```
 
 Set up the crontab:

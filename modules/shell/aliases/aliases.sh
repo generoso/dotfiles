@@ -11,7 +11,7 @@ alias grep='grep --color=always'
 
 complete -d cd
 
-alias r='readlink -e '
+alias r='realpath '
 
 # Save and go to last saved directory
 alias sd='pwd > ~/.last-dir'

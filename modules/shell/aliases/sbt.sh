@@ -14,15 +14,15 @@ function qsbt-class(){
 function qsbt-dependencies(){
   REPORT=`find target/resolution-cache/ | grep compile-internal.xml`
   echo "Found report at: $REPORT"
-  REPORT_URL=file://`readlink -e $REPORT`
+  REPORT_URL=file://`realpath $REPORT`
   echo "Opening $REPORT_URL (this may take a while)..."
   firefox $REPORT_URL
 }
 
 function qsbt-scoverage(){
   REPORT=$(find * -name index.html | grep scoverage-report)
-  REPORT_FULL=$(readlink -e $REPORT)
-  REPORT_URL=file://$(readlink -e $REPORT_FULL)
+  REPORT_FULL=$(realpath $REPORT)
+  REPORT_URL=file://$(realpath $REPORT_FULL)
   echo 'Run after: sbt clean "set every coverageEnabled := true" test coverageReport && sbt coverageAggregate'
   echo "Opening $REPORT_URL (this may take a while)..."
   firefox $REPORT_URL
