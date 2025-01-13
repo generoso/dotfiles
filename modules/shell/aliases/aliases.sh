@@ -7,7 +7,7 @@ alias top='top -c'
 alias htop="htop -u `whoami`"
 alias route='route -n'
 alias cal='cal -3'
-alias grep='grep --color=always'
+alias cgrep='grep --color=always'
 
 complete -d cd
 
