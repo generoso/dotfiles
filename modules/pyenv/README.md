@@ -14,7 +14,7 @@ Installation (it comes with virtualenv plugin)
 curl https://pyenv.run | bash
 ```
 
-Then add these to .bashrc (should be already there if using dotfiles):
+Then you can add these to .bashrc:
 
 ```
 # pyenv config from .dotfiles
@@ -24,6 +24,8 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
+Note: on MacOS the above lines make the shell very slow. So I dropped them from .bashrc
+and created an alias in `./shell/aliases/pyenv.sh` to activate pyenv in a shell.
 
 Test:
 ```
