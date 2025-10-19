@@ -1,4 +1,4 @@
-# Remapping modifier keys
+# Remapping modifier keys [DEPRECATED] [config no longer used]
 
 Left Shift Key => Control
 Caps Lock  Key => Shift
