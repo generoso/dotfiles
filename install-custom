@@ -8,9 +8,6 @@ DOTFILES_ROOT="`pwd`"
 
 set -e
 
-echo "For: fzf"
-modules/fzf/install
-
 # echo "For: pyenv"
 # cd $DOTFILES_ROOT/modules/pyenv/
 # bash install

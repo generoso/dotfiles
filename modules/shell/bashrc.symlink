@@ -140,7 +140,8 @@ stty -ixon
 #echo "Welcome "$USER"!!!"
 #echo "Smart history file at: $CUSTOM_HISTORY_FILE"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# fzf - use modern built-in shell integration (requires fzf 0.48+)
+eval "$(fzf --bash)"
 
 # pyenv config from .dotfiles
 export PYENV_ROOT="$HOME/.pyenv"
