@@ -1,7 +1,7 @@
 # Utilities to work with python venv
 
 envs_dir=~/.venvs/
-env_file=.venv
+env_file=.venvname
 
 ## Autocompletion
 
